@@ -1,0 +1,35 @@
+# Created using wingetcreate 1.2.5.0
+# yaml-language-server: $schema=https://aka.ms/winget-manifest.installer.1.4.0.schema.json
+
+PackageIdentifier: Microsoft.PowerToys
+PackageVersion: 0.72.1
+Platform:
+  - Windows.Desktop
+MinimumOSVersion: 10.0.17134.0
+InstallerSwitches:
+  Silent: /quiet /norestart
+  SilentWithProgress: /quiet /norestart
+UpgradeBehavior: install
+Installers:
+  - Architecture: arm64
+    Scope: machine
+    InstallerType: burn
+    InstallerUrl: https://github.com/stefansjfw/PowerToys/releases/download/v0.72.1/PowerToysSetup-0.72.1-arm64.exe
+    InstallerSha256: 484728A40D329316147E6F96CAB43017CF305851E77AA8D9292A2040F9A2EEDB
+  - Architecture: arm64
+    Scope: user
+    InstallerType: burn
+    InstallerUrl: https://github.com/stefansjfw/PowerToys/releases/download/v0.72.1/PowerToysUserSetup-0.72.1-arm64.exe
+    InstallerSha256: 74382F9AA8194528A510A1ABBD0F59DDA57D886CAF7067494BF10522BC42CF09
+  - Architecture: x64
+    InstallerType: burn
+    Scope: machine
+    InstallerUrl: https://github.com/stefansjfw/PowerToys/releases/download/v0.72.1/PowerToysSetup-0.72.1-x64.exe
+    InstallerSha256: 71DC3260ABD46FA4B435F5224D03446339E210F647CB922BF3F3E2E837A4D6AA
+  - Architecture: x64
+    InstallerType: burn
+    Scope: user
+    InstallerUrl: https://github.com/stefansjfw/PowerToys/releases/download/v0.72.1/PowerToysUserSetup-0.72.1-x64.exe
+    InstallerSha256: 43756CF96A9A6D2CE8ED4925A335DE45F794DD36E76831346AD8AD651D9517BC
+ManifestType: installer
+ManifestVersion: 1.4.0
